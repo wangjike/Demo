@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coder.demo" >
+
+    <application
+        android:name="com.coder.DemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:icon="@drawable/ic_launcher"
+            android:name="com.coder.com.coder.base.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Dialog Demo preface-->
+        <activity
+            android:name="com.coder.alertdialogdemo.DialogMainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.coder.alertdialogdemo.NoTitleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDialogTheme">
+        </activity>
+
+        <activity
+            android:name="com.coder.alertdialogdemo.RedbagDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--ListView Demo Preface-->
+        <activity
+            android:name="com.coder.listView.ListViewMainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--view draw main-->
+        <activity
+            android:name="com.coder.view.DrawMainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.coder.view.DrawArcActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.coder.view.PhoneScreenInfo"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--Fragment Main -->
+        <activity
+            android:name="com.coder.fragment.FragmentMainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.coder.fragment.StaticFragmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.coder.fragment.DynamicFragmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+    </application>
+
+</manifest>

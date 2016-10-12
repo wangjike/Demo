@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mc_redbag_bg_red">#D74F43</color>
+    <color name="mc_redbag_text_color_black">#000000</color>
+    <color name="mc_redbag_text_color_gold">#FFD8AE</color>
+    <color name="mc_redbag_text_color_blue">#FF3D4091</color>
+    <color name="mc_redbag_text_color_gray">#9E9E9E</color>
+    <color name="mc_redbag_bg">#dc3e31</color>
+</resources>

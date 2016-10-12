@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/mc_redbag_bg_red" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/abc_ic_clear_mtrl_alpha" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_redbag_send_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:gravity="center"
+        android:background="@color/mc_redbag_bg_red"
+        >
+
+        <com.coder.alertdialogdemo.XCRoundImageView
+            android:id="@+id/send_redbag_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/title"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_redbag_send_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_redbag_send_avatar"
+        android:gravity="center"
+        android:background="@color/mc_redbag_bg_red"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mc_redbag_text_color_gold"
+            android:textSize="15sp"
+            android:text="你你你你你你你说" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_redbag_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/send_redbag_send_name"
+        android:gravity="center"
+        android:background="@color/mc_redbag_bg_red"
+        >
+
+        <TextView
+            android:id="@+id/tv_redbag_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/mc_redbag_text_color_gold"
+            android:textSize="25sp"
+            android:text="红包已经派送完了" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/cat"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/mc_redbag_bg"
+        android:layout_below="@+id/send_redbag_name"
+        >
+
+        <TextView
+            android:id="@+id/show_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/mc_redbag_text_color_gold"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:text="看看大家的手气>" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/round"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/send_redbag_name">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/mc_redbag_bg_red"/>
+
+        <com.coder.alertdialogdemo.ArcImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="-40dp"
+        android:layout_below="@+id/round">
+
+        <com.coder.alertdialogdemo.XCRoundImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/title"/>
+    </RelativeLayout>
+
+</RelativeLayout>
