@@ -17,6 +17,7 @@ import java.util.List;
  */
 public class ContactsAdapter  extends ArrayAdapter<Contacts> {
     private int resourceId;
+    /*XHYJ*/
     public ContactsAdapter(Context context, int textViewResourceId, List<Contacts>
             objects) {
         super(context, textViewResourceId, objects);
