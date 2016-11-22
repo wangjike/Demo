@@ -15,4 +15,9 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
+    <style name="TranslucentTheme" parent="android:Theme.Light">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
 </resources>

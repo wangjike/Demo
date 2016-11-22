@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.coder.alertdialogdemo"
-        minSdkVersion 17
+        minSdkVersion 11
         targetSdkVersion 19
     }
     buildTypes {

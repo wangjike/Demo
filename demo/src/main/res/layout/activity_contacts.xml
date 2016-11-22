@@ -7,14 +7,14 @@
 
     <com.coder.alertdialogdemo.XCRoundImageView
         android:layout_width="30dp"
-        android:layout_height="match_parent"
+        android:layout_height="30dp"
         android:src="@drawable/title"/>
 
     <LinearLayout
         android:id="@+id/content"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:gravity="end"
         android:orientation="vertical">
 
         <TextView
@@ -30,6 +30,5 @@
         android:id="@+id/delete"
         android:layout_width="30dp"
         android:layout_height="match_parent"
-        android:visibility="gone"
         android:src="@drawable/title"/>
 </LinearLayout>

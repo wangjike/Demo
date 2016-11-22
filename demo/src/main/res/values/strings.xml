@@ -20,6 +20,7 @@
 
     <string name="DrawArc">DrawArc</string>
     <string name="PhoneScreenInfo">PhoneScreenInfo</string>
+    <string name="ViewSlide">滑动</string>
 
     <!-- 对话框所需要的字符串资源-->
     <string name="dialog_message">这里是内容区域</string>

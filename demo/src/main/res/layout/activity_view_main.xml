@@ -27,4 +27,16 @@
         android:layout_width="match_parent"
         android:layout_height="40dp" />
 
+    <Button
+        android:id="@+id/view_slide"
+        android:text="@string/ViewSlide"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:background="#449F1D"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
 </LinearLayout>
