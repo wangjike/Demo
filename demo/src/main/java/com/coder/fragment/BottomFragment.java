@@ -15,6 +15,7 @@ import com.coder.DataModel.Contacts;
 import com.coder.adapter.ContactsAdapter;
 import com.coder.alertdialogdemo.XCRoundImageView;
 import com.coder.demo.R;
+import com.coder.view.SlideCutListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +23,11 @@ import java.util.List;
 /**
  * Created by JiKe on 2016/10/10.
  */
-public class BottomFragment extends Fragment {
+public class BottomFragment extends Fragment implements SlideCutListView.RemoveListener {
 
     public static String userName;
 
-    private ListView listView;
+    private SlideCutListView slideCutListView ;
     private ContactsAdapter adapter;
 
     private List<Contacts> bottomList = new ArrayList<Contacts>();
@@ -34,12 +35,6 @@ public class BottomFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        /*if(BottomFragment.userName == null){
-            Toast.makeText(getActivity(), "userName is null", Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(getActivity(), BottomFragment.userName, Toast.LENGTH_SHORT).show();
-        }*/
-        //Toast.makeText(activity,"Text!",Toast.LENGTH_SHORT).show();
         Log.e("Fragment", userName);
     }
 
@@ -48,11 +43,11 @@ public class BottomFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bottom, container, false);
         initList();
         Log.e("Fragment", userName);
-        listView = (ListView) view.findViewById(R.id.fragment_bottom_list_view);
+        slideCutListView = (SlideCutListView) view.findViewById(R.id.fragment_bottom_list_view);
         adapter = new ContactsAdapter(getActivity(), R.layout.activity_contacts, bottomList);
-        listView.setAdapter(adapter);
+        slideCutListView.setAdapter(adapter);
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        /*slideCutListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 XCRoundImageView imageView = (XCRoundImageView) view.findViewById(R.id.delete);
@@ -63,14 +58,14 @@ public class BottomFragment extends Fragment {
                     public void onClick(View view) {
                         Contacts item = adapter.getItem(position);
                         adapter.remove(item);
-                        listView.setAdapter(adapter);
-                        /*bottomList.remove(position);
-                        adapter.notifyDataSetChanged();*/
+                        slideCutListView.setAdapter(adapter);
+                        *//*bottomList.remove(position);
+                        adapter.notifyDataSetChanged();*//*
                     }
                 });
                 return true;
             }
-        });
+        });*/
 
 
         return view;
@@ -81,5 +76,26 @@ public class BottomFragment extends Fragment {
         bottomList.add(contact);
         bottomList.add(contact);
         bottomList.add(contact);
+        bottomList.add(contact);
+        bottomList.add(contact);
+        bottomList.add(contact);
+        bottomList.add(contact);
+        bottomList.add(contact);
+        bottomList.add(contact);
+    }
+
+    @Override
+    public void removeItem(SlideCutListView.RemoveDirection direction, int position) {
+        adapter.remove(adapter.getItem(position));
+        switch (direction) {
+            case RIGHT:
+                Toast.makeText(getActivity(), "向右删除  "+ position, Toast.LENGTH_SHORT).show();
+                break;
+            case LEFT:
+                Toast.makeText(getActivity(), "向左删除  "+ position, Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
     }
 }

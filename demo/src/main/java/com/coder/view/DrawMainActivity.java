@@ -16,6 +16,7 @@ public class DrawMainActivity extends BaseActivity implements View.OnClickListen
 
     private Button drawArc;
     private Button phoneScreenInfo;
+    private Button viewSlide;
     private Intent intent = new Intent();
 
     @Override
@@ -26,9 +27,11 @@ public class DrawMainActivity extends BaseActivity implements View.OnClickListen
 
         drawArc = (Button) findViewById(R.id.draw_arc);
         phoneScreenInfo = (Button) findViewById(R.id.phone_screen_info);
+        viewSlide = (Button) findViewById(R.id.view_slide);
 
         drawArc.setOnClickListener(this);
         phoneScreenInfo.setOnClickListener(this);
+        viewSlide.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +44,12 @@ public class DrawMainActivity extends BaseActivity implements View.OnClickListen
             case R.id.phone_screen_info:
                 intent.setClass(DrawMainActivity.this, PhoneScreenInfo.class);
                 startActivity(intent);
+                break;
+            case R.id.view_slide:
+                intent.setClass(DrawMainActivity.this, ViewSlideActivity.class);
+                startActivity(intent);
+                break;
+            default:
                 break;
         }
     }

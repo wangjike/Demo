@@ -38,6 +38,13 @@ public class ContactsAdapter  extends ArrayAdapter<Contacts> {
         } else {
             view = convertView;
         }
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                view.scrollTo(50,0);
+                return false;
+            }
+        });
         return view;
     }
 }

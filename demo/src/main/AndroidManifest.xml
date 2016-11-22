@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.coder.demo" >
 
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19"/>
+
     <application
         android:name="com.coder.DemoApplication"
         android:allowBackup="true"
@@ -54,6 +58,11 @@
 
         <activity
             android:name="com.coder.view.PhoneScreenInfo"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.coder.view.ViewSlideActivity"
             android:screenOrientation="portrait">
         </activity>
 
